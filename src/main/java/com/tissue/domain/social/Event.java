@@ -14,11 +14,9 @@ public class Event implements Serializable {
     private User actor;
 
     private Map object;
+    private Map target;
 
     List<User> notifies;
-
-    //private ActivityObject object;
-    //private ActivityObject target;
 
     public void setId(String id) {
         this.id = id;
@@ -60,6 +58,14 @@ public class Event implements Serializable {
          return object;
      }
 
+     public void setTarget(Map target) {
+         this.target = target;
+     }
+
+     public Map getTarget() {
+         return target;
+     }
+
      public void setNotifies(List<User> notifies) {
          this.notifies = notifies;
      }
@@ -68,21 +74,4 @@ public class Event implements Serializable {
          return notifies;
      }
 
-     /**
-     public void setObject(ActivityObject object) {
-         this.object = object;
-     }
-
-     public ActivityObject getObject() {
-         return object;
-     }
-
-     public void setTarget(ActivityObject target) {
-         this.target = target;
-     }
-
-     public ActivityObject getTarget() {
-         return target;
-     }
-     */
 }
