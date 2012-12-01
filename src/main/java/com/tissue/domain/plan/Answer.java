@@ -14,7 +14,7 @@ public class Answer implements Serializable {
     private Date createTime;
     private Date updateTime;
 
-    private Post post;
+    private Post question;
     private User user;
 
     List<AnswerComment> comments;
@@ -51,12 +51,12 @@ public class Answer implements Serializable {
         return updateTime;
     }
 
-    public void setPost(Post post) {
-        this.post = post;
+    public void setQuestion(Post question) {
+        this.question = question;
     }
 
-    public Post getPost() {
-        return post;
+    public Post getQuestion() {
+        return question;
     }
 
     public void setUser(User user) {
@@ -67,11 +67,11 @@ public class Answer implements Serializable {
         return user;
     }
 
-    public void setComments(List<AnswerComment> comments) {
+    public void setAnswerComments(List<AnswerComment> comments) {
         this.comments = comments;
     }
 
-    public List<AnswerComment> getComments() {
+    public List<AnswerComment> getAnswerComments() {
         return comments;
     }
 }

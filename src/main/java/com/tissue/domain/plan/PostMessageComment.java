@@ -55,11 +55,11 @@ public class PostMessageComment implements Serializable {
         return user;
     }
 
-    public void setMessage(PostMessage message) {
+    public void setPostMessage(PostMessage message) {
         this.message = message;
     }
 
-    public PostMessage getMessage() {
+    public PostMessage getPostMessage() {
         return message;
     }
 }
