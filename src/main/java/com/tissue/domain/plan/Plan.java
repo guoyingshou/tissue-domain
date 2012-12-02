@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Plan implements Serializable {
 
@@ -49,6 +50,9 @@ public class Plan implements Serializable {
     }
 
     public List<User> getMembers() {
+        if(members == null) {
+            members = new ArrayList();
+        }
         return members;
     }
 
