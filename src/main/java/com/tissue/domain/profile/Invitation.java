@@ -3,11 +3,14 @@ package com.tissue.domain.profile;
 import java.util.Date;
 
 public class Invitation {
+
     private String id;
     private String content;
     private Date createTime;
+    private Date updateTime;
 
     private User invitor;
+    private User invitee;
 
     public void setId(String id) {
         this.id = id;
@@ -33,6 +36,14 @@ public class Invitation {
         return createTime;
     }
 
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
     public void setInvitor(User invitor) {
         this.invitor = invitor; 
     }
@@ -40,4 +51,13 @@ public class Invitation {
     public User getInvitor() {
         return invitor;
     }
+
+    public void setInvitee(User invitee) {
+        this.invitee = invitee; 
+    }
+
+    public User getInvitee() {
+        return invitee;
+    }
+
 }
