@@ -5,16 +5,22 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Map;
 import java.util.List;
+import java.util.ArrayList;
+
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.DateTimeFormat;
 
 public class Event implements Serializable {
-    private String id;
+    protected String id;
 
-    private Date published;
-    private String type;
-    private User actor;
+    protected Date published;
+    protected String type;
+    protected User actor;
 
-    private Map object;
-    private Map target;
+    protected Map object;
+
+    protected Map target;
 
     List<User> notifies;
 
@@ -72,6 +78,24 @@ public class Event implements Serializable {
 
      public List<User> getNotifies() {
          return notifies;
+     }
+
+     public List getMessageArgs() {
+         List args = new ArrayList();
+         args.add(actor.getId());
+         args.add(actor.getDisplayName());
+
+         args.add(object.get("id"));
+         args.add(object.get("title"));
+
+         args.add(target.get("id"));
+         args.add(target.get("title"));
+
+         DateTime dt = new DateTime(published);
+         DateTimeFormatter dtf = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm");
+         args.add(dtf.print(dt));
+
+         return args;
      }
 
 }
