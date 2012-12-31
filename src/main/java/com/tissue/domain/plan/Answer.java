@@ -67,11 +67,11 @@ public class Answer implements Serializable {
         return user;
     }
 
-    public void setAnswerComments(List<AnswerComment> comments) {
+    public void setComments(List<AnswerComment> comments) {
         this.comments = comments;
     }
 
-    public List<AnswerComment> getAnswerComments() {
+    public List<AnswerComment> getComments() {
         return comments;
     }
 }
