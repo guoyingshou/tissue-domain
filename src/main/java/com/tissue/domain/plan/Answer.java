@@ -1,24 +1,29 @@
 package com.tissue.domain.plan;
 
+/**
 import com.tissue.domain.profile.User;
 
 import java.io.Serializable;
 import java.util.Date;
+*/
 import java.util.List;
 
-public class Answer implements Serializable {
+public class Answer extends Parent {
 
+    /**
     private String id;
 
     private String content;
     private Date createTime;
     private Date updateTime;
+    private User user;
+    */
 
     private Post question;
-    private User user;
 
     List<AnswerComment> comments;
 
+    /**
     public void setId(String id) {
         this.id = id;
     }
@@ -50,6 +55,7 @@ public class Answer implements Serializable {
     public Date getUpdateTime() {
         return updateTime;
     }
+    */
 
     public void setQuestion(Post question) {
         this.question = question;
@@ -59,6 +65,7 @@ public class Answer implements Serializable {
         return question;
     }
 
+    /**
     public void setUser(User user) {
         this.user = user;
     }
@@ -66,6 +73,7 @@ public class Answer implements Serializable {
     public User getUser() {
         return user;
     }
+    */
 
     public void setComments(List<AnswerComment> comments) {
         this.comments = comments;

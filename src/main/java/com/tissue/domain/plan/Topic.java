@@ -8,22 +8,23 @@ import java.util.Set;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Topic implements Serializable {
+public class Topic extends Parent {
 
-    private String id;
+    //private String id;
 
+    /**
     private String title;
     private String content;
     private Date createTime;
     private Date updateTime;
-    private Set<String> tags;
-
     private User user;
+    */
 
+    private Set<String> tags;
     private List<Plan> plans;
-
     private List<Post> posts;
     
+    /**
     public void setId(String id) {
         this.id = id;
     }
@@ -63,6 +64,7 @@ public class Topic implements Serializable {
     public Date getUpdateTime() {
         return updateTime;
     }
+    */
 
     public void setTags(Set<String> tags) {
         this.tags = tags;
@@ -72,6 +74,7 @@ public class Topic implements Serializable {
         return tags;
     }
 
+    /**
     public void setUser(User user) {
         this.user = user;
     }
@@ -79,6 +82,7 @@ public class Topic implements Serializable {
     public User getUser() {
         return user;
     }
+    */
 
     public void setPlans(List<Plan> plans) {
         this.plans = plans;
@@ -122,4 +126,13 @@ public class Topic implements Serializable {
     public long getPostsCount() {
         return posts.size();
     }
+
+    /**
+    public boolean isOwner(String viewerId) {
+        if(viewerId.equals(user.getId())) {
+            return true;
+        }
+        return false;
+    }
+    */
 }

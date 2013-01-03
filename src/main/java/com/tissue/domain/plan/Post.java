@@ -6,13 +6,16 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class Post implements Serializable {
+public class Post extends Parent {
 
+    /**
     private String id;
 
     private String title;
     private String content;
     private Date createTime;
+    private User user;
+    */
 
     private Boolean closed = false;
 
@@ -21,7 +24,6 @@ public class Post implements Serializable {
      */
     private String type;
 
-    private User user;
     private Plan plan;
 
     private List<PostMessage> messages;
@@ -29,6 +31,7 @@ public class Post implements Serializable {
     private List<QuestionComment> comments;
     private List<Answer> answers;
 
+    /**
     public void setId(String id) {
         this.id = id;
     }
@@ -36,6 +39,7 @@ public class Post implements Serializable {
     public String getId() {
         return id;
     }
+    */
 
     public void setClosed(Boolean closed) {
         this.closed = closed;
@@ -45,6 +49,7 @@ public class Post implements Serializable {
         return closed;
     }
 
+    /**
     public void setTitle(String title) {
         this.title = title;
     }
@@ -60,6 +65,7 @@ public class Post implements Serializable {
     public String getContent() {
         return content;
     }
+    */
 
     public void setType(String type) {
         this.type = type;
@@ -69,6 +75,7 @@ public class Post implements Serializable {
         return type;
     }
 
+    /**
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
@@ -84,6 +91,7 @@ public class Post implements Serializable {
     public User getUser() {
         return user;
     }
+    */
 
     public void setPlan(Plan plan) {
         this.plan = plan;
@@ -118,5 +126,14 @@ public class Post implements Serializable {
     public List<Answer> getAnswers() {
         return answers;
     }
+
+    /**
+    public boolean isOwner(String viewerId) {
+        if(viewerId.equals(user.getId())) {
+            return true;
+        }
+        return false;
+    }
+    */
 
 }

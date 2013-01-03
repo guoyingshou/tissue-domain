@@ -1,30 +1,37 @@
 package com.tissue.domain.plan;
 
-//import com.tissue.domain.profile.User;
+import com.tissue.domain.profile.User;
 
-//import java.io.Serializable;
-//import java.util.Date;
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Set;
+import java.util.List;
+import java.util.ArrayList;
 
-public class PostMessageComment extends Parent {
+public class Parent implements Serializable {
 
-    /**
-    private String id;
-    private String content;
-    private Date createTime;
-    private Date updateTime;
+    protected String id;
+    protected String title;
+    protected String content;
+    protected Date createTime;
+    protected Date updateTime;
 
-    private User user;
-    */
-
-    private PostMessage message;
-
-    /**
+    protected User user;
+   
     public void setId(String id) {
         this.id = id;
     }
 
     public String getId() {
         return id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public void setContent(String content) {
@@ -58,13 +65,11 @@ public class PostMessageComment extends Parent {
     public User getUser() {
         return user;
     }
-    */
 
-    public void setPostMessage(PostMessage message) {
-        this.message = message;
-    }
-
-    public PostMessage getPostMessage() {
-        return message;
+    public boolean isOwner(String viewerId) {
+        if(viewerId.equals(user.getId())) {
+            return true;
+        }
+        return false;
     }
 }

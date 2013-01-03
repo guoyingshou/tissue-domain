@@ -6,17 +6,20 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class PostMessage implements Serializable {
+public class PostMessage extends Parent {
 
+    /**
     private String id;
     private String content;
     private Date createTime;
     private Date updateTime;
-
     private User user;
+    */
+
     private Post post;
     private List<PostMessageComment> comments;
 
+    /**
     public void setId(String id) {
         this.id = id;
     }
@@ -56,6 +59,7 @@ public class PostMessage implements Serializable {
     public User getUser() {
         return user;
     }
+    */
 
     public void setPost(Post post) {
         this.post = post;
@@ -72,4 +76,13 @@ public class PostMessage implements Serializable {
     public List<PostMessageComment> getComments() {
         return comments;
     }
+
+    /**
+    public boolean isOwner(String viewerId) {
+        if(vieweId.equals(user.getId())) {
+            return true;
+        }
+        return false;
+    }
+    */
 }
