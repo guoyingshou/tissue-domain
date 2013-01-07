@@ -12,15 +12,17 @@ public class TopicEvent extends Event {
      public List getMessageArgs() {
 
          List args = new ArrayList();
+         /**
          args.add(actor.getId());
          args.add(actor.getDisplayName());
 
-         args.add(object.get("id"));
-         args.add(object.get("title"));
+         args.add(object.getId());
+         args.add(object.getTitle());
 
          DateTime dt = new DateTime(published);
          DateTimeFormatter dtf = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm");
          args.add(dtf.print(dt));
+         */
 
          return args;
      }

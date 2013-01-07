@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Topic extends Parent {
+public class Topic extends ContentParent {
 
     private Set<String> tags;
     private List<Plan> plans;

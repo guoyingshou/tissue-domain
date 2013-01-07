@@ -2,7 +2,7 @@ package com.tissue.domain.plan;
 
 import java.util.List;
 
-public class Answer extends Parent {
+public class Answer extends ContentParent {
 
     private Post question;
 

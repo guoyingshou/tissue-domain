@@ -2,21 +2,20 @@ package com.tissue.domain.plan;
 
 import java.util.List;
 
-public class Post extends Parent {
+public class Post extends ContentParent {
 
     private Boolean closed = false;
 
-    /**
-     * concept, note, tutorial or question.
-     */
     private String type;
 
     private Plan plan;
 
+    /**
     private List<PostMessage> messages;
 
     private List<QuestionComment> comments;
     private List<Answer> answers;
+    */
 
     public void setClosed(Boolean closed) {
         this.closed = closed;
@@ -42,7 +41,7 @@ public class Post extends Parent {
         return plan;
     }
 
-    //field avaible for concept, note or tutorial
+    /**
     public void setMessages(List<PostMessage> messages) {
         this.messages = messages;
     }
@@ -67,5 +66,6 @@ public class Post extends Parent {
     public List<Answer> getAnswers() {
         return answers;
     }
+    */
 
 }

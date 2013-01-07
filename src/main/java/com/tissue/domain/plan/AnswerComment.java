@@ -1,6 +1,6 @@
 package com.tissue.domain.plan;
 
-public class AnswerComment extends Parent {
+public class AnswerComment extends ContentParent {
 
     private Answer answer;
 

@@ -3,31 +3,16 @@ package com.tissue.domain.plan;
 import com.tissue.domain.profile.User;
 
 import org.joda.time.DateTime;
-import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Plan implements Serializable {
-
-    private String id;
+public class Plan extends Parent {
 
     private Integer duration;
-    private Date createTime;
 
-    private User user;
     private Topic topic;
-
     private List<User> members;
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getId() {
-        return id;
-    }
 
     public void setDuration(Integer duration) {
         this.duration = duration;
@@ -35,14 +20,6 @@ public class Plan implements Serializable {
 
     public Integer getDuration() {
         return duration;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
     }
 
     public void setMembers(List<User> members) {
@@ -56,14 +33,6 @@ public class Plan implements Serializable {
         return members;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
     public void setTopic(Topic topic) {
         this.topic = topic;
     }
@@ -72,11 +41,7 @@ public class Plan implements Serializable {
         return topic;
     }
 
-    public Boolean isOwnerOrMember(String userId) {
-        if(userId.equals(this.user.getId())) {
-            return true;
-        }
-
+    public Boolean isMember(String userId) {
         if(members != null) {
             for(User user : members) {
                 if(userId.equals(user.getId())) {
@@ -84,7 +49,6 @@ public class Plan implements Serializable {
                 }
             }
         }
-
         return false;
     }
 

@@ -11,15 +11,17 @@ public class MemberEvent extends Event {
      @Override
      public List getMessageArgs() {
          List args = new ArrayList();
+         /**
          args.add(actor.getId());
          args.add(actor.getDisplayName());
 
-         args.add(target.get("id"));
-         args.add(target.get("title"));
+         args.add(target.getId());
+         args.add(target.getTitle());
 
          DateTime dt = new DateTime(published);
          DateTimeFormatter dtf = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm");
          args.add(dtf.print(dt));
+         */
 
          return args;
      }

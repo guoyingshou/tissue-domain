@@ -11,10 +11,7 @@ import java.util.ArrayList;
 public class Parent implements Serializable {
 
     protected String id;
-    protected String title;
-    protected String content;
     protected Date createTime;
-    protected Date updateTime;
 
     protected User user;
    
@@ -26,36 +23,12 @@ public class Parent implements Serializable {
         return id;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
     public Date getCreateTime() {
         return createTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
     }
 
     public void setUser(User user) {

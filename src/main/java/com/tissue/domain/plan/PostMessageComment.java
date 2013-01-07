@@ -1,6 +1,6 @@
 package com.tissue.domain.plan;
 
-public class PostMessageComment extends Parent {
+public class PostMessageComment extends ContentParent {
 
     private PostMessage message;
 
