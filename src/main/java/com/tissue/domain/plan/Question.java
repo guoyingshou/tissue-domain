@@ -2,10 +2,14 @@ package com.tissue.domain.plan;
 
 import java.util.List;
 
-public class Question extends Post {
+public class Question extends PostWrapper {
 
     private List<QuestionComment> comments;
     private List<Answer> answers;
+
+    public Question(Post post) {
+        super(post);
+    }
 
     public void setComments(List<QuestionComment> comments) {
         this.comments = comments;

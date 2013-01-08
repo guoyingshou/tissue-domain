@@ -2,16 +2,9 @@ package com.tissue.domain.plan;
 
 import java.util.List;
 
-public class Tutorial extends Post {
+public class Tutorial extends Cnt {
 
-    private List<PostMessage> messages;
-
-    public void setMessages(List<PostMessage> messages) {
-        this.messages = messages;
+    public Tutorial(Post post) {
+        super(post);
     }
-
-    public List<PostMessage> getMessages() {
-        return messages;
-    }
-
 }

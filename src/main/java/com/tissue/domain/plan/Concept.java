@@ -2,16 +2,9 @@ package com.tissue.domain.plan;
 
 import java.util.List;
 
-public class Concept extends Post {
+public class Concept extends Cnt {
 
-    private List<PostMessage> messages;
-
-    public void setMessages(List<PostMessage> messages) {
-        this.messages = messages;
+    public Concept(Post post) {
+        super(post);
     }
-
-    public List<PostMessage> getMessages() {
-        return messages;
-    }
-
 }
